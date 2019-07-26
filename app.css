@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background: #cfd8dc  
+}
+
+header {
+  background: #00897b;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 10px 30px;
+  font-size: 22px;
+}
+
+#attendees {
+  margin-top: 60px;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+}

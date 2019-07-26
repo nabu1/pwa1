@@ -1,0 +1,14 @@
+{
+  "name": "pwa1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "workbox injectManifest workbox-config.js"
+  },
+  "dependencies": {
+    "axios": "0.19.0",
+    "webpack": "4.38.0",
+    "workbox-cli": "4.3.1"
+  }
+}
