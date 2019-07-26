@@ -17,6 +17,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "a9466992a2522b27e3200e8eeb618190"
   },
   {
+    "url": "app.webmanifest",
+    "revision": "b36b7c9b0ac0d9e2134c701de3433739"
+  },
+  {
     "url": "images/icons/icon-128x128.png",
     "revision": "a1ef1b9708d1ea183a9bc3c84ae12f2b"
   },
@@ -58,6 +62,6 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "workbox-config.js",
-    "revision": "90150034ee2498b67534aade6b82af9b"
+    "revision": "43e42ed935bb8bed7601394eda546738"
   }
 ])
