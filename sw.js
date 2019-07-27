@@ -58,10 +58,13 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "src-sw.js",
-    "revision": "8f4063649c147f9aa083a333543ff4d8"
+    "revision": "5c7dcf81624f119ec890ee0f7b823610"
   },
   {
     "url": "workbox-config.js",
     "revision": "43e42ed935bb8bed7601394eda546738"
   }
 ])
+
+workbox.core.skipWaiting()
+workbox.core.clientsClaim()

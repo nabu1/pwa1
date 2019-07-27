@@ -8,3 +8,6 @@ workbox.routing.registerRoute(
 )
 
 workbox.precaching.precacheAndRoute([])
+
+workbox.core.skipWaiting()
+workbox.core.clientsClaim()
