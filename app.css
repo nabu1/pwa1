@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background: #cfd8dc  
+  background: #cfd8dc;
+  box-sizing: border-box; 
 }
 
 header {
