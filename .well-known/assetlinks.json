@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.netlify.wizardly-curie-1b44b2",
+    "package_name": "com.netlify.mk04",
     "sha256_cert_fingerprints":
     ["77:16:E5:FD:47:7F:A0:ED:07:3B:41:0E:B1:85:99:55:4B:79:CE:73:DF:21:A0:56:03:3C:F8:0A:92:D6:57:C5"]
   }
