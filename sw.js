@@ -10,7 +10,7 @@ workbox.routing.registerRoute(
 workbox.precaching.precacheAndRoute([
   {
     "url": "app.css",
-    "revision": "1e5827fc52e885c1ddad6bf2a6549275"
+    "revision": "3173614c3eb4c779b019b24e5543616b"
   },
   {
     "url": "app.js",
@@ -54,7 +54,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "ad71ab213d93edb51263c6f2c1d9685a"
+    "revision": "ba69ea36d856246a442953244e53cc74"
   },
   {
     "url": "src-sw.js",

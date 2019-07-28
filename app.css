@@ -15,6 +15,14 @@ header {
   font-size: 22px;
 }
 
+button {
+  margin-top: 60px;
+  width: 140px;
+  height: 60px;
+  background: orange;
+  font-size: 1rem
+}
+
 #attendees {
   margin-top: 60px;
 }
