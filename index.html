@@ -37,16 +37,19 @@
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(position => {
           console.log(position.coords)
-          // alert(JSON.stringify(position.coords.latitude))
-          // return position;
+          const lat = position.coords.latitude  
+          const lon = position.coords.longitude  
+          const url = 'https://api.opencagedata.com/geocode/v1/json?q=' + lat + '+' + lon + '&key=224e8e01cf8f43a0aabb1b68341904a1'
+
+          console.log(url)  
+
           axios
-          .get('https://api.opencagedata.com/geocode/v1/json?q=52.1700885+21.033294299999998&key=224e8e01cf8f43a0aabb1b68341904a1')
-          .then(el => {
-              console.log(el.data.results[0].formatted)
-              // alert(position.coords.latitude + '\n' + position.coords.longitude)
-              alert(el.data.results[0].formatted)
-          })
-          .catch(err => console.log(err))
+            .get('https://api.opencagedata.com/geocode/v1/json?q=' + lat + '+' + lon + '&key=224e8e01cf8f43a0aabb1b68341904a1')
+            .then(el => {
+                console.log(el.data.results[0].formatted)
+                alert(el.data.results[0].formatted)
+            })
+            .catch(err => console.log(err))
         })
       }
       else {

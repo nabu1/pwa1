@@ -15,7 +15,4 @@ axios.get('https://jsonplaceholder.typicode.com/users')
   })
   .catch(err => console.log('Erroras:', err))
 
-// ! caches.open('test-cache')
-// ! caches.open('test-cache').then(cache => { console.log(cache) })
-// ! caches.open('test-cache').then(cache => { cache.add('https://jsonplaceholder.typicode.com/users/')})
 
