@@ -4,17 +4,44 @@ console.log('Siemanko z Service Workiera')
 workbox.routing.registerRoute(
   /https:\/\/jsonplaceholder\.typicode\.com\/users/,
   new workbox.strategies.NetworkFirst()
-  //  workbox.strategies.networkFirst()
 )
+
+workbox.routing.registerRoute(
+  /\.(?:js|css)$/,
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'static-resources',
+  })
+)
+
+workbox.routing.registerRoute(
+  /^https:\/\/fonts\.googleapis\.com/,
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: 'google-fonts-stylesheets',
+  })
+);
+
+workbox.routing.registerRoute(
+  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  workbox.strategies.cacheFirst({
+    cacheName: 'images',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  })
+);
+
 
 workbox.precaching.precacheAndRoute([
   {
     "url": "app.css",
-    "revision": "3173614c3eb4c779b019b24e5543616b"
+    "revision": "10348f2d02ad4c726191be95062b4c0c"
   },
   {
     "url": "app.js",
-    "revision": "a9466992a2522b27e3200e8eeb618190"
+    "revision": "5eced2337b766c8bf4723088352a3306"
   },
   {
     "url": "app.webmanifest",
@@ -54,11 +81,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "ba69ea36d856246a442953244e53cc74"
+    "revision": "ea3f3400520e6ed71f38b6903e54ba16"
   },
   {
     "url": "src-sw.js",
-    "revision": "5c7dcf81624f119ec890ee0f7b823610"
+    "revision": "d1c0251fe5c2133b90adbd1e37321cd6"
   },
   {
     "url": "workbox-config.js",
